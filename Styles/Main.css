@@ -1,0 +1,118 @@
+.menu-open{
+    overflow: hidden;
+}
+* { 
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #fff;
+}
+body>header{
+    font-size: 1.3em;
+    height: 1.8em;
+    border-bottom: solid 4px #f56a6a;
+    /*padding: 1em 2em 0.4em 2em;*/
+    padding-top: 1em;
+    min-width: 50%;
+    max-width: 80%;
+    margin: 0 auto 0 auto;
+}
+h1, h2, h3, h4{
+    margin-bottom: 1em;
+}
+main article>header a{
+    border-bottom: solid 2px #f56a6a;
+    padding-bottom: 0.5em;
+}
+body>header a{
+    text-decoration: none;
+    color: inherit;
+    font-weight: initial;
+}
+main{
+    padding-top: 1em;
+    min-width: 50%;
+    max-width: 80%;
+    margin: 0 auto 0 auto;
+}
+
+img{
+    border-radius: 0.375em;
+    margin: 1em 0 1em 0;
+}
+.profile-img{
+    height: 17em;
+    border-radius: 0.5em;
+    background-image: url(../profile.jpg);
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+    background-attachment: initial;
+    min-width: 16em;
+    margin: 0.5em 0 1em 0;
+    display: inline-block;
+}
+main article ~ a, article, article > footer{
+    margin-top: 1em;
+}
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+}
+ul.tags{
+    list-style: none;
+}
+ul.tags>li{
+    display: inline-block;
+    margin-right: .313rem;
+    box-sizing: border-box;
+    border: .125rem solid #e1e1e1;
+    border-radius: .25rem;
+    text-transform: uppercase;
+    font-size: .875rem;
+    line-height: 1.2;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    transition: background-color .2s ease-out;
+    margin-bottom: 0.5em;
+}
+ul.tags>li>a{
+    padding: .313rem 1.25rem;
+    display: inline-block;
+}
+.button{
+    appearance: none;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    background-color: transparent;
+    border-radius: 0.375em;
+    border: 0;
+    box-shadow: inset 0 0 0 2px #f56a6a;
+    color: #f56a6a;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: 700;
+    height: 3.5em;
+    letter-spacing: 0.075em;
+    line-height: 3.5em;
+    padding: 0 2.25em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin: 1em 0 1em 0;
+}
+hr{
+    margin: 1.5em 0;
+}
+body>footer{
+    background-color: #f5f6f7;
+    margin-top: 1em;
+    padding: 1.5em;
+    
+    padding: 1.5em 10%;
+}

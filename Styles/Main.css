@@ -12,7 +12,6 @@ body>header{
     font-size: 1.3em;
     height: 1.8em;
     border-bottom: solid 4px #f56a6a;
-    /*padding: 1em 2em 0.4em 2em;*/
     padding-top: 1em;
     min-width: 50%;
     max-width: 80%;
@@ -47,12 +46,14 @@ img{
     background-image: url(../profile.jpg);
     background-position-x: center;
     background-position-y: center;
-    background-repeat-x: no-repeat;
-    background-repeat-y: no-repeat;
+    background-repeat: no-repeat;
     background-attachment: initial;
     min-width: 16em;
     margin: 0.5em 0 1em 0;
     display: inline-block;
+}
+.intro p{
+    font-size: 1.3em;
 }
 main article ~ a, article, article > footer{
     margin-top: 1em;
@@ -85,7 +86,6 @@ ul.tags>li>a{
     display: inline-block;
 }
 .button{
-    appearance: none;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     background-color: transparent;
     border-radius: 0.375em;
@@ -112,7 +112,46 @@ hr{
 body>footer{
     background-color: #f5f6f7;
     margin-top: 1em;
-    padding: 1.5em;
-    
     padding: 1.5em 10%;
+}
+
+@supports (grid-area: auto) {
+    @media screen and (min-width: 61.25em) {
+        body {
+            display: grid;
+            grid-template-columns: 20em 1fr;
+            grid-template-rows: 1fr minmax(1em, auto);
+            grid-template-areas: "menu header"
+								 "menu main"
+								 "footer none";
+        }
+		body>nav[role="navigation"] {
+            grid-area: menu;
+			left: initial;
+			width: auto;
+			position: initial;
+			overflow-x: initial;
+			overflow-y: initial;
+			z-index: initial;
+			top: initial;
+			box-sizing: border-box;
+        }
+        body>header {
+            grid-area: header;
+            width: 100%;
+        }
+        body>main {
+            grid-area: main;
+			box-sizing: border-box;
+        }
+        body>footer {
+			margin-top: 0;
+            grid-area: footer;
+            box-sizing: border-box;
+        }
+		
+		label.toggle-menu{ 
+			display: none;
+		}
+    }
 }

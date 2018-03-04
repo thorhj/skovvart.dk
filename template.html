@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="Styles/Main.css">
     <link rel="stylesheet" href="Styles/Navigation.css">
     <link rel="stylesheet" href="Styles/Typography.css">
+    <link rel="stylesheet" href="Styles/Print.css" media="print" />
 
     <!--
     <link rel="preload" href="/Styles/Main.css" as="style">
@@ -45,8 +46,8 @@
                 <a href="#Author">Nicolai Skovvart</a>
             </h1>
             <a href="#Author" class="profile-img" aria-label="Nicolai Skovvart"></a>
-            <p>Hi, I'm Nicolai Skovvart, I work as a senior software architect at Immeo and i use this blog to write about development
-                of modern web applications, typically on Microsoft platforms.</p>
+            <p>Hi, I'm Nicolai Skovvart. I work as a senior software architect at Immeo and i use this blog to write about development
+                of modern web applications, primarily using Microsoft technologies.</p>
             <a href="#Author" class="button">Read more&hellip;</a>
         </div>
         <hr>
@@ -161,6 +162,7 @@
             <li>
                 <a href="#link3">Link 3</a>
             </li>
+			<!--
             <li>
                 <a href="#link3">Link 3</a>
             </li>
@@ -244,7 +246,7 @@
             </li>
             <li>
                 <a href="#link3">Link 3</a>
-            </li>
+            </li>-->
         </ul>
     </nav>
 
@@ -255,8 +257,10 @@
     <script>
         var body = document.querySelector("body");
         var toggleMenu = document.getElementById("toggle-menu");
+        var toggleButton = body.querySelector(".toggle-menu");
         toggleMenu.addEventListener("click", function () {
             body.className = toggleMenu.checked ? "menu-open" : "";
+            toggleButton.innerHTML = toggleMenu.checked ? "&times;" : "&equiv;";
         });
     </script>
     <!--<script src="/Scripts.js" async></script>-->
